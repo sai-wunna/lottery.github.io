@@ -13,6 +13,7 @@ body {
     rgb(111, 53, 178),
     rgb(59, 28, 95)
   );
+  overflow-x: hidden;
 }
 
 #app {
@@ -20,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 20px;
 }
 
 header {
@@ -32,6 +34,7 @@ header {
 h1 {
   background-image: url('./assets/golden.jpg');
   background-clip: text;
+  -webkit-background-clip: text;
   background-size: cover;
   background-repeat: repeat;
   color: transparent;
@@ -59,10 +62,11 @@ article {
 }
 
 img {
-  width: auto;
+  width: 100%;
   max-height: 400px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 img:hover {
@@ -75,14 +79,14 @@ img:hover {
 }
 
 .app-info {
-  margin: 1rem;
+  margin: 2rem;
   gap: 1rem;
   display: flex;
   justify-content: center;
 }
 
 nav {
-  margin: 1rem;
+  margin: 3rem 0;
   display: flex;
   justify-content: center;
   gap: 1em;
@@ -123,7 +127,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 2rem 1rem 1rem 1rem;
-  background: linear-gradient(180deg, rgb(91, 44, 148), rgb(59, 28, 95));
+  border-top: 2px solid;
   color: white;
 }
 
@@ -143,4 +147,11 @@ footer {
   .img-box-poster {
     display: block;
   }
+}
+
+.money {
+  font-size: 1.1rem;
+  position: absolute;
+  transition: 1s ease-in-out;
+  color: gold;
 }
